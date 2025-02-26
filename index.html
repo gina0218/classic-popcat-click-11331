@@ -114,6 +114,27 @@
         audio.play();
     });
 
+    document.addEventListener('keydown', function () {
+        // 3. 計數器累加
+        addCount();
+        // 4.註冊滑鼠按下的時候，更新計數器的顯示
+        catImg.textContent = count;
+        // 切換張嘴圖片
+        catImg.id='op';
+
+    });
+
+    // 放開便恢復原本圖片
+    document.addEventListener('keyup', function () {
+        catImg.id='p';
+    });
+
+    // 當滑鼠按下，播放 pops/pop1.mp3
+    document.addEventListener('keydown', function () {
+        const audio = new Audio('pops/pop1.mp3');
+        audio.play();
+    });
+
 </script>
 
 </body>
